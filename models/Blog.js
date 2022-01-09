@@ -14,13 +14,12 @@ Blog.init({
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-            len: [30]
+            len: [1, 30]
         }
     },
     body: {
         type: DataTypes.STRING,
-        allowNull: false,
-
+        allowNull: false
     },
     user_id: {
         type: DataTypes.INTEGER,
@@ -34,7 +33,7 @@ Blog.init({
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'blog'
+    modelName: "blog"
 })
 
 module.exports = Blog;
