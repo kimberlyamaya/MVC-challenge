@@ -11,6 +11,7 @@
     <div class="main-container">
         <header>
             <h1>Tech Blog</h1>
+            <!--#if loggedIn-->
             <nav>
                 <ul class="nav-list">
                     <li class="nav-item">
@@ -24,9 +25,10 @@
                     </li>
                 </ul>
             </nav>
+            <!--else nav item logout changes to login-->
         </header>
 
-        <section>
+        <section class="body-container">
             {{{ body }}}
         </section>
 

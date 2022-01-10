@@ -22,6 +22,11 @@ body, html {
   flex-direction: column;
 }
 
+.body-container {
+  flex: 1;
+  padding: 2% 4%;
+}
+
 header {
   background-color: #1E90FF;
   color: black;
@@ -56,4 +61,35 @@ footer h5 {
   border-top: 2px solid #1E90FF;
   padding-top: 5px;
   margin: 0px;
+}
+
+.blog-list {
+  margin: 0;
+  padding: 0;
+}
+
+.blog-item {
+  list-style: none;
+  background-color: #1E90FF;
+}
+
+.blog {
+  margin-bottom: 5px;
+  line-height: 150%;
+}
+
+.blog .title span {
+  font-style: italic;
+  font-size: 90%;
+  color: black;
+}
+
+.title a {
+    text-decoration: none;
+    color: black;
+}
+
+.title a:hover {
+    text-decoration: none;
+    color: #e5e5f7;
 }
