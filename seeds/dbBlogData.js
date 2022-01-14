@@ -40,6 +40,11 @@ const dbBlogData = [
     title: 'title of blog post 8',
     body: 'body of blog post 8',
     user_id: 4
+  },
+  {
+    title: 'title of blog post 9',
+    body: "body of blog post 9",
+    user_id: 4
   }
 ];
 

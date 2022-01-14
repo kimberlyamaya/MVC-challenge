@@ -3,6 +3,7 @@ const { Comment, User, Blog } = require("../../models")
 
 // GET api/comments
 router.get("/", (req, res) => {
+  console.log('======================');
   Comment.findAll({
     attributes: ["id", "body", "user_id", "blog_id", "createdAt", "updatedAt"],
     include: [{

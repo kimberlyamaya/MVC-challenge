@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tech Blog</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
@@ -15,17 +15,21 @@
             <nav>
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="#">Home</a>
+                        <a href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="#">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#">Logout</a>
+                        <a href="/login">Login</a>
+                    </li>
+                    <!--I want this to be conditional-->
+                    <li class="nav-item">
+                        <button id="logout" class="btn-no-style">logout</button>
                     </li>
                 </ul>
             </nav>
-            <!--else nav item logout changes to login-->
+            <!--else nav item logout changes to logout-->
         </header>
 
         <section class="body-container">
@@ -36,6 +40,8 @@
             <h5>Created by: Kimberly Amaya</h5>
         </footer>
     </div>
+
+    <script src="/javascript/logout.js"></script> 
     
 </body>
 </html>

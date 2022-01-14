@@ -3,6 +3,7 @@ const sequelize = require("../config/connection");
 const { Blog, User, Comment } = require("../models");
 
 router.get("/", (req, res) => {
+  console.log(req.session);
   Blog.findAll({
     attributes: ["id", "title", "body", "user_id", "created_at" //"blog_url",
     ],
@@ -31,4 +32,15 @@ router.get("/", (req, res) => {
   })
 })
 
-module.exports = router;
+router.get("/login", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+
+  res.render("login");
+});
+
+// can I add the same login route for sign up here?
+
+module.exports = router;  

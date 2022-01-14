@@ -3,6 +3,7 @@ const { Blog, User } = require("../../models")
 
 // GET api/blogs
 router.get("/", (req, res) => {
+  console.log('======================');
   Blog.findAll({
     attributes: ["id", "title", "body", "user_id", "createdAt", "updatedAt"],
     include: [{

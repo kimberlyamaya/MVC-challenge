@@ -66,30 +66,67 @@ footer h5 {
 .blog-list {
   margin: 0;
   padding: 0;
+  border: 2px solid #1E90FF;
 }
 
 .blog-item {
   list-style: none;
-  background-color: #1E90FF;
+  padding-bottom: 10px;
+  border: none;
 }
 
-.blog {
+.blog-title {
   margin-bottom: 5px;
   line-height: 150%;
+  background-color: #1E90FF;
+  padding: 10px;  
 }
 
-.blog .title span {
+.blog-title span {
   font-style: italic;
   font-size: 90%;
   color: black;
 }
 
-.title a {
+.blog-title a {
     text-decoration: none;
     color: black;
 }
 
-.title a:hover {
+.blog-title a:hover {
     text-decoration: none;
     color: #e5e5f7;
+}
+
+.blog-body {
+  padding: 10px;
+  margin: 0px;
+}
+
+.btn-no-style {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color:black;
+}
+
+.btn-no-style:hover {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color:black;
+}
+
+.nav-item {
+  list-style: none;
+  margin-right: 2rem;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color:black;
+}
+
+.nav-item a:hover {
+  color:#e5e5f7;
 }
