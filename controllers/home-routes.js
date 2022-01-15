@@ -15,11 +15,11 @@ router.get("/", (req, res) => {
           model: User,
           attributes: ["username"]
         }
-      }
-      /*{
+      },
+      {
         model: User,
         attributes: ["username"]
-      }*/
+      }
     ]
   })
   .then(dbBlogData => {
@@ -67,11 +67,11 @@ router.get("/blog/:id", (req, res) => {
           model: User,
           attributes: ["username"]
         }
-      }
-      /*{
+      },
+      {
         model: User,
         attributes: ["username"]
-      }*/
+      }
     ]
   })
     .then(dbBlogData => {

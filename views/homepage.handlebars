@@ -1,13 +1,7 @@
 <ol class="blog-list">
-    {{#each blogs as |blog|}}
-        <li class="blog-item">
-            <div class="blog-title">
-                <a href="/blog/{{blog.id}}" target="_blank">{{blog.title}}</a>
-                <span>Posted by: {{blog.user_id}} on {{blog.created_at}}</span>
-            </div>
-            <div class="blog-body">
-                <p>{{blog.body}}</p>
-            </div>
-        </li>
-    {{/each}}
+  {{#each blogs as |blog|}}
+  <li>
+    {{> blog-info blog }}
+  </li>
+  {{/each}}
 </ol>
