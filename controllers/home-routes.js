@@ -43,6 +43,11 @@ router.get("/login", (req, res) => {
 
 // can I add the same login route for sign up here?
 router.get("/signup", (req, res) => {
+  
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
 
   res.render("signup");
 });
