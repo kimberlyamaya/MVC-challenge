@@ -42,16 +42,18 @@ router.get("/:id", (req, res) => {
 
 // POST /api/comments
 router.post("/", (req, res) => {
-  Comment.create({
-    body: req.body.body,
-    user_id: req.body.user_id,
-    blog_id: req.body.blog_id
-  })
-  .then(dbCommentData => res.json(dbCommentData))
-  .catch(err => {
-    console.log(err)
-    res.status(500).json(err)
-  })
+  if (req.session) {
+    Comment.create({
+      body: req.body.body,
+      user_id: req.body.user_id,
+      blog_id: req.body.blog_id
+    })
+    .then(dbCommentData => res.json(dbCommentData))
+    .catch(err => {
+      console.log(err)
+      res.status(500).json(err)
+    })
+  }
 })
 
 // PUT /api/comments/1

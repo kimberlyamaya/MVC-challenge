@@ -19,8 +19,13 @@ async function loginFormHandler(event) {
         }),
         headers: { 'Content-Type': 'application/json' }
       });
+      
+
+      const userData = await response.json()
+      console.log(userData.user.id)
   
       if (response.ok) {
+        localStorage.setItem("userId",userData.user.id)
         document.location.replace('/');
       } else {
         alert(response.statusText);

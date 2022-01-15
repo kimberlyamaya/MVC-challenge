@@ -20,16 +20,18 @@
                     <li class="nav-item">
                         <a href="#">Dashboard</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="/login">Login</a>
-                    </li>
                     <!--I want this to be conditional-->
+                    {{#if loggedIn}}
                     <li class="nav-item">
                         <button id="logout" class="btn-no-style">logout</button>
                     </li>
+                    {{else}}
+                    <li class="nav-item">
+                        <a href="/login">Login</a>
+                    </li>                    
+                    {{/if}}
                 </ul>
             </nav>
-            <!--else nav item logout changes to logout-->
         </header>
 
         <section class="body-container">
@@ -39,9 +41,10 @@
         <footer>
             <h5>Created by: Kimberly Amaya</h5>
         </footer>
+        
     </div>
-
+    {{#if loggedIn}}
     <script src="/javascript/logout.js"></script> 
-    
+    {{/if}}
 </body>
 </html>

@@ -66,17 +66,15 @@ footer h5 {
 .blog-list {
   margin: 0;
   padding: 0;
-  border: 2px solid #1E90FF;
+  padding-bottom: 10px;
 }
 
 .blog-item {
   list-style: none;
-  padding-bottom: 10px;
-  border: none;
+  padding-bottom: 20px;
 }
 
 .blog-title {
-  margin-bottom: 5px;
   line-height: 150%;
   background-color: #1E90FF;
   padding: 10px;  
@@ -101,6 +99,7 @@ footer h5 {
 .blog-body {
   padding: 10px;
   margin: 0px;
+  border: 2px solid #1E90FF;
 }
 
 .btn-no-style {
