@@ -41,4 +41,47 @@ router.get("/", withAuth, (req, res) => {
     });
 });
 
+router.get("/edit/:id", withAuth, (req, res) => {
+  Blog.findOne({
+    where: {
+      id: req.params.id
+    },
+    attributes: [
+      "id",
+      "title",
+      "body",
+      "user_id",
+      "created_at"
+    ],
+    include: [
+      {
+        model: Comment,
+        attributes: ["id", "body", "user_id", "blog_id", "created_at"],
+        include: {
+          model: User,
+          attributes: ["username"]
+        }
+      },
+      {
+        model: User,
+        attributes: ["username"]
+      }
+    ]
+  })
+    .then(dbBlogData => {
+      if (!dbBlogData) {
+        res.status(404).json({ message: "No blog found with this id" });
+        return;
+      }
+
+      const blog = dbBlogData.get({ plain: true });
+
+      res.render("edit-post", { blog, loggedIn: req.session.loggedIn });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+})
+
 module.exports = router;

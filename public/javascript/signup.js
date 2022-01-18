@@ -18,6 +18,16 @@ async function signupFormHandler(event) {
         headers: { 'Content-Type': 'application/json' }
       })
       console.log(response);
+
+      const userData = await response.json()
+      console.log(userData)
+  
+      if (response.ok) {
+        // localStorage.setItem("userId", userData.user.id)
+        document.location.replace('/dashboard');
+      } else {
+        alert(response.statusText);
+      }
     }
   }
 document.querySelector('.signup-form').addEventListener('submit', signupFormHandler)
