@@ -53,6 +53,21 @@ header {
     color:#e5e5f7;
 }
 
+.btn-no-style {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color:black;
+  font: inherit;
+}
+
+.btn-no-style:hover {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color:#e5e5f7;
+}
+
 footer {
   text-align: center; 
 }
@@ -78,12 +93,14 @@ footer h5 {
   line-height: 150%;
   background-color: #1E90FF;
   padding: 10px;  
+  font-weight: bold;
 }
 
 .blog-title span {
   font-style: italic;
   font-size: 90%;
   color: black;
+  font-weight: normal;
 }
 
 .blog-title a {
@@ -102,30 +119,3 @@ footer h5 {
   border: 2px solid #1E90FF;
 }
 
-.btn-no-style {
-  background: none;
-  border: none;
-  text-decoration: none;
-  color:black;
-}
-
-.btn-no-style:hover {
-  background: none;
-  border: none;
-  text-decoration: none;
-  color:black;
-}
-
-.nav-item {
-  list-style: none;
-  margin-right: 2rem;
-}
-
-.nav-item a {
-  text-decoration: none;
-  color:black;
-}
-
-.nav-item a:hover {
-  color:#e5e5f7;
-}
