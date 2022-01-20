@@ -2,15 +2,25 @@
   <h2>Create New Post</h2>
 
   <form class="new-post-form">
-    <div>
-      <label for="blog-title-form">Title</label>
-      <input type="text" id="blog-title-form" name="blog-title-form" />
+    <div class="div-post-form">
+      <div class="label">
+       <label for="blog-title-form" class="label">Blog Title</label>
+      </div>
+      <div class="label">
+        <input type="text" id="blog-title-form" name="blog-title-form" />
+      </div>
     </div>
-    <div>
-      <label for="blog-body-form">Body</label>
+    <div class="div-post-form">
+      <div class="label">
+        <label for="blog-body-form" class="label">Blog Body</label>
+      </div>
+      <div class="label">
       <textarea name="blog-body-form" id="blog-body-form"></textarea>
+      </div>
     </div>
-    <button type="submit" class="btn">Create</button>
+    <div class="btn-container">
+      <button type="submit" class="btn">Create</button>
+    </div>
   </form>
 </section>
 
@@ -19,10 +29,8 @@
   <h2>Your Posts</h2>
   <ol>
     {{#each blog as |blog|}}
-    <li>
       {{> blog-info-dashboard blog}}
       <!--<a href="/dashboard/edit/{{blog.id}}" class="edit-link">Edit post</a>-->
-    </li>
     {{/each}}
   </ol>
 </section>  
