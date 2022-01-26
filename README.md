@@ -29,7 +29,7 @@
   9. Once satisfied return to bash and disconnect from the server by typing ctrl + c on your keyboard
 
   # on Heroku
-  1. Follow this link to the application: http://
+  1. Follow this link to the application: https://secure-dusk-47715.herokuapp.com/
   2. Press the Login button to login
   3. Press Click here to signup
   4. Fill in fields and press Signup
